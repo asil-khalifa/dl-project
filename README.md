@@ -33,8 +33,8 @@ flowchart LR
 ## Setup
 
 ```bash
-git clone https://github.com/asil-khalifa/studyqg.git
-cd studyqg
+git clone https://github.com/asil-khalifa/dl-project.git
+cd dl-project
 python3 -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install torch --index-url https://download.pytorch.org/whl/cpu   # or the CUDA wheel
 pip install -r requirements.txt
