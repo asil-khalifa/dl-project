@@ -1,0 +1,116 @@
+train: 8000 examples -> data/squad_hl/train.jsonl
+validation: 300 examples -> data/squad_hl/validation.jsonl
+example source: generate question: In 1873, Tesla returned to his birthtown, Smiljan. Shortly after he arrived, Tesla contracted cholera; he was bedridden for nine months and was near death multiple times. Tesla's fa ...
+example target: What was Tesla's father's original plans for Tesla?
+device=cpu threads=8 base=google-t5/t5-small
+train=8000 val=200 params=60.5M steps=1000
+initial val loss = 3.6632
+epoch 1 step 20/1000 loss 3.5840 lr 1.20e-04 elapsed 1.2m eta 56.6m
+epoch 1 step 40/1000 loss 2.9026 lr 2.40e-04 elapsed 2.7m eta 64.1m
+epoch 1 step 60/1000 loss 2.6391 lr 2.97e-04 elapsed 5.2m eta 81.6m
+epoch 1 step 80/1000 loss 2.5086 lr 2.91e-04 elapsed 6.5m eta 74.8m
+epoch 1 step 100/1000 loss 2.3943 lr 2.84e-04 elapsed 7.2m eta 64.9m
+epoch 1 step 120/1000 loss 2.3218 lr 2.78e-04 elapsed 8.1m eta 59.6m
+epoch 1 step 140/1000 loss 2.3311 lr 2.72e-04 elapsed 8.9m eta 54.5m
+epoch 1 step 160/1000 loss 2.1749 lr 2.65e-04 elapsed 9.5m eta 50.1m
+epoch 1 step 180/1000 loss 2.2201 lr 2.59e-04 elapsed 10.3m eta 46.7m
+epoch 1 step 200/1000 loss 2.1725 lr 2.53e-04 elapsed 11.0m eta 44.0m
+epoch 1 step 220/1000 loss 2.1338 lr 2.46e-04 elapsed 11.7m eta 41.5m
+epoch 1 step 240/1000 loss 2.1814 lr 2.40e-04 elapsed 12.4m eta 39.3m
+epoch 1 step 260/1000 loss 2.0352 lr 2.34e-04 elapsed 13.1m eta 37.4m
+epoch 1 step 280/1000 loss 2.0573 lr 2.27e-04 elapsed 13.8m eta 35.6m
+epoch 1 step 300/1000 loss 2.2614 lr 2.21e-04 elapsed 14.5m eta 33.8m
+epoch 1 step 320/1000 loss 2.3130 lr 2.15e-04 elapsed 15.2m eta 32.3m
+epoch 1 step 340/1000 loss 2.0203 lr 2.08e-04 elapsed 15.9m eta 30.9m
+epoch 1 step 360/1000 loss 2.0398 lr 2.02e-04 elapsed 16.6m eta 29.5m
+epoch 1 step 380/1000 loss 2.0387 lr 1.96e-04 elapsed 17.3m eta 28.2m
+epoch 1 step 400/1000 loss 2.0876 lr 1.89e-04 elapsed 18.4m eta 27.6m
+epoch 1 step 420/1000 loss 2.0948 lr 1.83e-04 elapsed 19.1m eta 26.4m
+epoch 1 step 440/1000 loss 2.1300 lr 1.77e-04 elapsed 20.0m eta 25.5m
+epoch 1 step 460/1000 loss 2.1395 lr 1.71e-04 elapsed 20.8m eta 24.4m
+epoch 1 step 480/1000 loss 2.0522 lr 1.64e-04 elapsed 21.6m eta 23.4m
+epoch 1 step 500/1000 loss 1.9898 lr 1.58e-04 elapsed 22.4m eta 22.4m
+epoch 1 step 520/1000 loss 2.0063 lr 1.52e-04 elapsed 23.1m eta 21.3m
+epoch 1 step 540/1000 loss 2.1682 lr 1.45e-04 elapsed 24.0m eta 20.4m
+epoch 1 step 560/1000 loss 2.0383 lr 1.39e-04 elapsed 25.9m eta 20.3m
+epoch 1 step 580/1000 loss 2.2278 lr 1.33e-04 elapsed 26.8m eta 19.4m
+epoch 1 step 600/1000 loss 2.0975 lr 1.26e-04 elapsed 27.8m eta 18.5m
+epoch 1 step 620/1000 loss 2.0635 lr 1.20e-04 elapsed 28.7m eta 17.6m
+epoch 1 step 640/1000 loss 2.0205 lr 1.14e-04 elapsed 29.5m eta 16.6m
+epoch 1 step 660/1000 loss 1.9981 lr 1.07e-04 elapsed 30.3m eta 15.6m
+epoch 1 step 680/1000 loss 2.0372 lr 1.01e-04 elapsed 31.4m eta 14.8m
+epoch 1 step 700/1000 loss 1.8547 lr 9.47e-05 elapsed 32.9m eta 14.1m
+epoch 1 step 720/1000 loss 1.9533 lr 8.84e-05 elapsed 34.3m eta 13.3m
+epoch 1 step 740/1000 loss 1.9530 lr 8.21e-05 elapsed 35.4m eta 12.4m
+epoch 1 step 760/1000 loss 2.1164 lr 7.58e-05 elapsed 36.2m eta 11.4m
+epoch 1 step 780/1000 loss 1.9862 lr 6.95e-05 elapsed 37.2m eta 10.5m
+epoch 1 step 800/1000 loss 2.0512 lr 6.32e-05 elapsed 38.4m eta 9.6m
+epoch 1 step 820/1000 loss 2.1421 lr 5.68e-05 elapsed 39.1m eta 8.6m
+epoch 1 step 840/1000 loss 1.9301 lr 5.05e-05 elapsed 39.8m eta 7.6m
+epoch 1 step 860/1000 loss 2.0924 lr 4.42e-05 elapsed 40.6m eta 6.6m
+epoch 1 step 880/1000 loss 2.1013 lr 3.79e-05 elapsed 41.4m eta 5.6m
+epoch 1 step 900/1000 loss 1.9407 lr 3.16e-05 elapsed 42.7m eta 4.7m
+epoch 1 step 920/1000 loss 1.9444 lr 2.53e-05 elapsed 44.2m eta 3.8m
+epoch 1 step 940/1000 loss 2.0075 lr 1.89e-05 elapsed 45.8m eta 2.9m
+epoch 1 step 960/1000 loss 2.1156 lr 1.26e-05 elapsed 46.8m eta 2.0m
+epoch 1 step 980/1000 loss 2.0964 lr 6.32e-06 elapsed 47.9m eta 1.0m
+epoch 1 step 1000/1000 loss 1.8921 lr 0.00e+00 elapsed 48.7m eta 0.0m
+== epoch 1 done: val loss 1.6784
+saved model to /home/asilk/self/dl-project/studyqg/models/t5-small-studyqg; log to /home/asilk/self/dl-project/studyqg/results/train_log.json; 48.9 min
+{
+  "bleu4": 2.73,
+  "bleu1": 17.88,
+  "rougeL": 15.18,
+  "meteor": 10.18,
+  "exact_match": 0.0,
+  "name": "t5-small-zero-shot",
+  "model": "google-t5/t5-small",
+  "n": 300,
+  "num_beams": 4,
+  "seconds_per_question": 0.55
+}
+wrote /home/asilk/self/dl-project/studyqg/results/metrics.csv
+{
+  "bleu4": 17.69,
+  "bleu1": 48.13,
+  "rougeL": 42.19,
+  "meteor": 41.01,
+  "exact_match": 1.0,
+  "name": "t5-small-ours",
+  "model": "models/t5-small-studyqg",
+  "n": 300,
+  "num_beams": 4,
+  "seconds_per_question": 0.634
+}
+wrote /home/asilk/self/dl-project/studyqg/results/metrics.csv
+{
+  "bleu4": 22.45,
+  "bleu1": 52.78,
+  "rougeL": 47.86,
+  "meteor": 47.67,
+  "exact_match": 2.67,
+  "name": "t5-small-lmqg",
+  "model": "lmqg/t5-small-squad-qg-ae",
+  "n": 300,
+  "num_beams": 4,
+  "seconds_per_question": 0.914
+}
+wrote /home/asilk/self/dl-project/studyqg/results/metrics.csv
+{
+  "bleu4": 24.49,
+  "bleu1": 54.56,
+  "rougeL": 49.67,
+  "meteor": 49.54,
+  "exact_match": 4.67,
+  "name": "t5-base-lmqg",
+  "model": "lmqg/t5-base-squad-qg-ae",
+  "n": 300,
+  "num_beams": 4,
+  "seconds_per_question": 2.685
+}
+wrote /home/asilk/self/dl-project/studyqg/results/metrics.csv
+findfont: Failed to find font weight semibold for DejaVu Sans, now using 700.
+findfont: Failed to find font weight semibold for DejaVu Sans, now using 700.
+wrote results/training_curve.png
+wrote results/metrics.png
+done: see results/

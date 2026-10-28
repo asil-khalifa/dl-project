@@ -1,0 +1,184 @@
+{
+  "stats": {
+    "n_words": 398,
+    "n_passages": 4,
+    "n_candidates": 66,
+    "n_selected": 18,
+    "n_generated": 18,
+    "n_passed_filter": 18,
+    "n_final": 10,
+    "mean_quality": 1.0,
+    "by_type": {
+      "short": 3,
+      "mcq": 3,
+      "fill": 2,
+      "tf": 2
+    },
+    "qg_model": "lmqg/t5-base-squad-qg-ae",
+    "qa_model": "distilbert/distilbert-base-cased-distilled-squad",
+    "elapsed_s": 157.6
+  },
+  "questions": [
+    {
+      "qid": 1,
+      "qtype": "short",
+      "question": "When was the perceptron proposed?",
+      "answer": "1958",
+      "options": [],
+      "passage_id": 0,
+      "source_sentence": "The earliest trainable model, the perceptron, was proposed by Frank Rosenblatt in 1958 and could only learn linearly separable patterns.",
+      "quality": 1.0,
+      "qa_confidence": 0.987,
+      "qa_answer": "1958",
+      "bloom": "Remember",
+      "answer_kind": "NUMBER"
+    },
+    {
+      "qid": 2,
+      "qtype": "mcq",
+      "question": "What stacks many layers so that later layers learn increasingly abstract features?",
+      "answer": "Deep networks",
+      "options": [
+        "Hochreiter and Schmidhuber",
+        "Several techniques",
+        "Convolutional neural networks",
+        "Deep networks"
+      ],
+      "passage_id": 0,
+      "source_sentence": "Deep networks stack many layers so that later layers learn increasingly abstract features.",
+      "quality": 1.0,
+      "qa_confidence": 0.997,
+      "qa_answer": "Deep networks",
+      "bloom": "Remember",
+      "answer_kind": "NOUN_CHUNK"
+    },
+    {
+      "qid": 3,
+      "qtype": "fill",
+      "question": "Fill in the blank: They are trained with gradient descent: the loss between the prediction and the target is computed, and the backpropagation algorithm, popularised by ______ in 1986, applies the chain rule to compute the gradient of the loss with respect to every weight.",
+      "answer": "Rumelhart, Hinton and Williams",
+      "options": [],
+      "passage_id": 0,
+      "source_sentence": "They are trained with gradient descent: the loss between the prediction and the target is computed, and the backpropagation algorithm, popularised by Rumelhart, Hinton and Williams in 1986, applies the chain rule to compute the gradient of the loss with respect to every weight.",
+      "quality": 1.0,
+      "qa_confidence": 0.994,
+      "qa_answer": "Rumelhart, Hinton and Williams",
+      "bloom": "Remember",
+      "answer_kind": "NOUN_CHUNK"
+    },
+    {
+      "qid": 4,
+      "qtype": "tf",
+      "question": "True or False: Yann LeCun's LeNet-5, published in 1998, read deep networks on bank cheques.",
+      "answer": "False (correct: handwritten digits)",
+      "options": [
+        "True",
+        "False"
+      ],
+      "passage_id": 1,
+      "source_sentence": "Yann LeCun's LeNet-5, published in 1998, read handwritten digits on bank cheques.",
+      "quality": 1.0,
+      "qa_confidence": 0.994,
+      "qa_answer": "handwritten digits",
+      "bloom": "Remember",
+      "answer_kind": "NOUN_CHUNK"
+    },
+    {
+      "qid": 5,
+      "qtype": "short",
+      "question": "Who won the ImageNet competition in 2012?",
+      "answer": "AlexNet",
+      "options": [],
+      "passage_id": 1,
+      "source_sentence": "In 2012, AlexNet won the ImageNet competition by a large margin and started the deep learning boom in computer vision.",
+      "quality": 1.0,
+      "qa_confidence": 0.974,
+      "qa_answer": "AlexNet",
+      "bloom": "Remember",
+      "answer_kind": "ORG"
+    },
+    {
+      "qid": 6,
+      "qtype": "mcq",
+      "question": "What process sequences by feeding their hidden state back into the network at each time step?",
+      "answer": "Recurrent neural networks",
+      "options": [
+        "Kingma and Ba",
+        "Recurrent neural networks",
+        "Several techniques",
+        "Convolutional neural networks"
+      ],
+      "passage_id": 2,
+      "source_sentence": "Recurrent neural networks process sequences by feeding their hidden state back into the network at each time step.",
+      "quality": 1.0,
+      "qa_confidence": 0.991,
+      "qa_answer": "Recurrent neural networks",
+      "bloom": "Remember",
+      "answer_kind": "NOUN_CHUNK"
+    },
+    {
+      "qid": 7,
+      "qtype": "fill",
+      "question": "Fill in the blank: The long short-term memory network, or LSTM, introduced by ______ in 1997, uses gates to remember information over long sequences.",
+      "answer": "Hochreiter and Schmidhuber",
+      "options": [],
+      "passage_id": 2,
+      "source_sentence": "The long short-term memory network, or LSTM, introduced by Hochreiter and Schmidhuber in 1997, uses gates to remember information over long sequences.",
+      "quality": 1.0,
+      "qa_confidence": 0.994,
+      "qa_answer": "Hochreiter and Schmidhuber",
+      "bloom": "Remember",
+      "answer_kind": "NOUN_CHUNK"
+    },
+    {
+      "qid": 8,
+      "qtype": "tf",
+      "question": "True or False: The Transformer replaces recurrence with self-attention, which lets every token attend to every other token in parallel, and it is the basis of modern language models such as BERT, T5 and GPT.",
+      "answer": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "passage_id": 2,
+      "source_sentence": "The Transformer replaces recurrence with self-attention, which lets every token attend to every other token in parallel, and it is the basis of modern language models such as BERT, T5 and GPT.",
+      "quality": 1.0,
+      "qa_confidence": 0.975,
+      "qa_answer": "recurrence",
+      "bloom": "Remember",
+      "answer_kind": "NOUN_CHUNK"
+    },
+    {
+      "qid": 9,
+      "qtype": "short",
+      "question": "Who introduced Batch normalisation in 2015?",
+      "answer": "Ioffe and Szegedy",
+      "options": [],
+      "passage_id": 3,
+      "source_sentence": "Batch normalisation, introduced by Ioffe and Szegedy in 2015, normalises the activations of each layer and allows higher learning rates.",
+      "quality": 1.0,
+      "qa_confidence": 0.994,
+      "qa_answer": "Ioffe and Szegedy",
+      "bloom": "Remember",
+      "answer_kind": "NOUN_CHUNK"
+    },
+    {
+      "qid": 10,
+      "qtype": "mcq",
+      "question": "Who proposed the Adam optimiser?",
+      "answer": "Kingma and Ba",
+      "options": [
+        "Transfer learning",
+        "Deep networks",
+        "Several techniques",
+        "Kingma and Ba"
+      ],
+      "passage_id": 3,
+      "source_sentence": "The Adam optimiser, proposed by Kingma and Ba in 2014, adapts the learning rate of each parameter using estimates of the first and second moments of the gradients.",
+      "quality": 1.0,
+      "qa_confidence": 0.997,
+      "qa_answer": "Kingma and Ba",
+      "bloom": "Remember",
+      "answer_kind": "NOUN_CHUNK"
+    }
+  ]
+}

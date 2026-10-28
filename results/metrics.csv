@@ -1,0 +1,5 @@
+name,model,n,num_beams,bleu1,bleu4,rougeL,meteor,exact_match,seconds_per_question
+t5-small-zero-shot,google-t5/t5-small,300,4,17.88,2.73,15.18,10.18,0.0,0.55
+t5-small-ours,models/t5-small-studyqg,300,4,48.13,17.69,42.19,41.01,1.0,0.634
+t5-small-lmqg,lmqg/t5-small-squad-qg-ae,300,4,52.78,22.45,47.86,47.67,2.67,0.914
+t5-base-lmqg,lmqg/t5-base-squad-qg-ae,300,4,54.56,24.49,49.67,49.54,4.67,2.685

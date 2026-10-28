@@ -1,0 +1,164 @@
+{
+  "bleu4": 24.49,
+  "bleu1": 54.56,
+  "rougeL": 49.67,
+  "meteor": 49.54,
+  "exact_match": 4.67,
+  "name": "t5-base-lmqg",
+  "model": "lmqg/t5-base-squad-qg-ae",
+  "n": 300,
+  "num_beams": 4,
+  "seconds_per_question": 2.685,
+  "examples": [
+    {
+      "highlighted": "In 1873, Tesla returned to his birthtown, Smiljan. Shortly after he arrived, Tesla contracted cholera; he was bedridden for nine months and was near death multiple times. Tesla's father, in a moment of despair, promised to send him to the best engineering school if he recovered from the illness (his father had originally wanted him to <hl> enter the priesthood <hl>).",
+      "answer": "enter the priesthood",
+      "reference": "What was Tesla's father's original plans for Tesla?",
+      "prediction": "What did Tesla's father originally want him to do?"
+    },
+    {
+      "highlighted": "In 2010, Newcastle was positioned ninth in the retail centre expenditure league of the UK. There are several major shopping areas in Newcastle City Centre. The largest of these is the <hl> Eldon Square Shopping Centre, <hl> one of the largest city centre shopping complexes in the UK. It incorporates a flagship Debenhams store as well as one of the largest John Lewis stores in the UK. John Lewis is still known to many in Newcastle as Bainbridges. Newcastle store Bainbridge's, opened in 1838, is often cited as the world’s first department store. Emerson Bainbridge (1817–1892), a pioneer and the founder of Bainbridges, sold goods via department, a new for merchant custom for that time. The Bainbridge’s official ledgers reported revenue by department, giving birth to the name department store. Eldon Square is currently undergoing a full redevelopment. A new bus station, replacing the old underground bus station, was officially opened in March 2007. The wing of the centre, including the undercover Green Market, near Grainger Street was demolished in 2007 so that the area could be redeveloped. This was completed in February 2010 with the opening of a flagship Debenhams department store as well as other major stores including Apple, Hollister and Guess.",
+      "answer": "Eldon Square Shopping Centre,",
+      "reference": "What is one of the largest city center shopping complexes in the UK?",
+      "prediction": "What is the largest shopping area in Newcastle City Centre?"
+    },
+    {
+      "highlighted": "The merger between ABC and Capital Cities received federal approval on September 5, 1985. After the ABC/Capital Cities merger was finalized on January 3, 1986, the combined company – which became known as <hl> Capital Cities/ABC, Inc. <hl> – added four television stations (WPVI-TV/Philadelphia, KTRK-TV/Houston, KFSN-TV/Fresno and WTVD/Raleigh) and several radio stations to ABC's broadcasting portfolio, and also included Fairchild Publications and four newspapers (including The Kansas City Star and Fort Worth Star-Telegram). It also initiated several changes in its management: Frederick S. Pierce was named president of ABC's broadcasting division; Michael P. Millardi became vice president of ABC Broadcasting, and president of ABC Owned Stations and ABC Video Enterprises; John B. Sias was appointed president of the ABC Television Network; Brandon Stoddard became president of ABC Entertainment (a position to which he had been appointed in November 1985); and Roone Arledge became president of ABC News and ABC Sports. In February 1986, Thomas S. Murphy, who had been serving as CEO of Capital Cities since 1964, was appointed chairman and CEO emeritus of ABC. Jim Duffy stepped down as ABC Television president for a management position at ABC Communications, a subsidiary that specialized in community service programming, including shows related to literary education.",
+      "answer": "Capital Cities/ABC, Inc.",
+      "reference": "After the merger between ABC and Capital Cities was completed, what was the resulting company known as?",
+      "prediction": "What was the merger of ABC and Capital Cities called?"
+    },
+    {
+      "highlighted": "The outcome was one of the most significant developments in a century of Anglo-French conflict. France ceded its <hl> territory east of the Mississippi to Great Britain <hl>. It ceded French Louisiana west of the Mississippi River (including New Orleans) to its ally Spain, in compensation for Spain's loss to Britain of Florida (Spain had ceded this to Britain in exchange for the return of Havana, Cuba). France's colonial presence north of the Caribbean was reduced to the islands of Saint Pierre and Miquelon, confirming Britain's position as the dominant colonial power in eastern North America.",
+      "answer": "territory east of the Mississippi to Great Britain",
+      "reference": "What territory was ceded to Britain?",
+      "prediction": "What territory did France cede to Great Britain?"
+    },
+    {
+      "highlighted": "Teachers are required to be registered with <hl> the Teaching Council <hl>; under Section 30 of the Teaching Council Act 2001, a person employed in any capacity in a recognised teaching post - who is not registered with the Teaching Council - may not be paid from Oireachtas funds.",
+      "answer": "the Teaching Council",
+      "reference": "With whom are teachers required to register?",
+      "prediction": "Who are teachers required to be registered with?"
+    },
+    {
+      "highlighted": "Since the IPCC does not carry out its own research, it operates on the basis of scientific papers and independently documented results from <hl> other scientific bodies <hl>, and its schedule for producing reports requires a deadline for submissions prior to the report's final release. In principle, this means that any significant new evidence or events that change our understanding of climate science between this deadline and publication of an IPCC report cannot be included. In an area of science where our scientific understanding is rapidly changing, this has been raised as a serious shortcoming in a body which is widely regarded as the ultimate authority on the science. However, there has generally been a steady evolution of key findings and levels of scientific confidence from one assessment report to the next.[citation needed]",
+      "answer": "other scientific bodies",
+      "reference": "What does the IPCC rely on for research?",
+      "prediction": "The IPCC operates on the basis of scientific papers and independently documented results from what?"
+    },
+    {
+      "highlighted": "Between 1991 and 2000, the total area of forest lost in the Amazon rose from 415,000 to 587,000 square kilometres (160,000 to 227,000 sq mi), with most of the lost forest becoming pasture for cattle. Seventy percent of formerly forested land in the Amazon, and <hl> 91% <hl> of land deforested since 1970, is used for livestock pasture. Currently, Brazil is the second-largest global producer of soybeans after the United States. New research however, conducted by Leydimere Oliveira et al., has shown that the more rainforest is logged in the Amazon, the less precipitation reaches the area and so the lower the yield per hectare becomes. So despite the popular perception, there has been no economical advantage for Brazil from logging rainforest zones and converting these to pastoral fields.",
+      "answer": "91%",
+      "reference": "What percentage of the land cleared in the Amazon is used for growing livestock?",
+      "prediction": "What percentage of land in the Amazon has been deforested since 1970?"
+    },
+    {
+      "highlighted": "Tesla made predictions about the relevant issues of a <hl> post-World War I <hl> environment in a printed article, \"Science and Discovery are the great Forces which will lead to the Consummation of the War\" (20 December 1914). Tesla believed that the League of Nations was not a remedy for the times and issues.[citation needed]",
+      "answer": "post-World War I",
+      "reference": "The issues of what era did Tesla's article talk about?",
+      "prediction": "What time period did Tesla believe the League of Nations was not a remedy?"
+    },
+    {
+      "highlighted": "The succession of Genghis Khan was already a significant topic during the later years of his reign, as he reached old age. The long running paternity discussion about Genghis' oldest son Jochi was particularly contentious because of the seniority of <hl> Jochi <hl> among the brothers. According to traditional historical accounts, the issue over Jochi's paternity was voiced most strongly by Chagatai. In The Secret History of the Mongols, just before the invasion of the Khwarezmid Empire by Genghis Khan, Chagatai declared before his father and brothers that he would never accept Jochi as Genghis Khan's successor. In response to this tension, and possibly for other reasons, Ögedei was appointed as successor.",
+      "answer": "Jochi",
+      "reference": "The paternity of which of Genghis Khan's sons was disputed?",
+      "prediction": "Who was Genghis Khan's oldest son?"
+    },
+    {
+      "highlighted": "Cultural imperialism is when a country's influence is felt in social and cultural circles, i.e. its soft power, such that it changes the moral, cultural and societal worldview of another. This is more than just \"foreign\" music, television or film becoming popular with young people, but that popular culture changing their own expectations of life and their desire for their own country to become more like the foreign country depicted. For example, depictions of opulent American lifestyles in the soap opera <hl> Dallas <hl> during the Cold War changed the expectations of Romanians; a more recent example is the influence of smuggled South Korean drama series in North Korea. The importance of soft power is not lost on authoritarian regimes, fighting such influence with bans on foreign popular culture, control of the internet and unauthorised satellite dishes etc. Nor is such a usage of culture recent, as part of Roman imperialism local elites would be exposed to the benefits and luxuries of Roman culture and lifestyle, with the aim that they would then become willing participants.",
+      "answer": "Dallas",
+      "reference": "Which American show changed the views of Romanians during the cold war?",
+      "prediction": "What soap opera depicted opulent American lifestyles changed the expectations of Romanians?"
+    },
+    {
+      "highlighted": "As well as being added, forces can also be resolved into independent components at right angles to each other. A horizontal force pointing northeast can therefore be split into two forces, one pointing north, and one pointing east. Summing these component forces using vector addition yields the original force. Resolving force vectors into components of a set of basis vectors is often a more mathematically clean way to describe forces than using magnitudes and directions. This is because, for orthogonal components, the components of the vector sum are uniquely determined by the scalar addition of the components of the individual vectors. Orthogonal components are independent of each other because forces acting at ninety degrees to each other have no effect on the magnitude or direction of the other. Choosing a set of orthogonal basis vectors is often done by considering what set of basis vectors will make the mathematics most convenient. Choosing a basis vector that is in the same direction as one of the forces is desirable, since that force would then have only one non-zero component. Orthogonal force vectors can be <hl> three-dimensional <hl> with the third component being at right-angles to the other two.",
+      "answer": "three-dimensional",
+      "reference": "What can orthogonal forces be when there are three components with two at right angles to each other?",
+      "prediction": "How can orthogonal force vectors be?"
+    },
+    {
+      "highlighted": "Administrator Webb realized that in order to keep Apollo costs under control, he had to develop greater project management skills in his organization, so he recruited Dr. George E. Mueller for a high management job. Mueller accepted, on the condition that he have a say in NASA reorganization necessary to effectively administer Apollo. Webb then worked with Associate Administrator (later Deputy Administrator) Robert Seamans to reorganize the Office of Manned Space Flight (OMSF). On <hl> July 23, 1963 <hl>, Webb announced Mueller's appointment as Deputy Associate Administrator for Manned Space Flight, to replace then Associate Administrator D. Brainerd Holmes on his retirement effective September 1. Under Webb's reorganization, the directors of the Manned Spacecraft Center (Gilruth) Marshall Space Flight Center (von Braun) and the Launch Operations Center (Debus) effectively reported to Mueller.",
+      "answer": "July 23, 1963",
+      "reference": "When was Mueller announced and appointed as Deputy Associate Administrator?",
+      "prediction": "When did Webb announce Mueller's appointment as Deputy Associate Administrator?"
+    },
+    {
+      "highlighted": "Jochi died in 1226, during his father's lifetime. Some scholars, notably Ratchnevsky, have commented on the possibility that Jochi was secretly poisoned by an order from Genghis Khan. Rashid al-Din reports that the great Khan sent for his sons in the spring of 1223, and while his brothers heeded the order, Jochi remained in Khorasan. Juzjani suggests that the disagreement arose from a quarrel between Jochi and his brothers in the siege of Urgench. Jochi had attempted to protect Urgench from destruction, as it belonged to territory allocated to him as a fief. He concludes his story with the clearly apocryphal statement by Jochi: \"Genghis Khan is mad to have massacred so many people and laid waste so many lands. I would be doing a service if I killed my father when he is hunting, made an alliance with Sultan Muhammad, brought this land to life and gave assistance and support to the Muslims.\" Juzjani claims that it was in response to hearing of these plans that Genghis Khan ordered his son secretly poisoned; however, as <hl> Sultan Muhammad was already dead in 1223 <hl>, the accuracy of this story is questionable.",
+      "answer": "Sultan Muhammad was already dead in 1223",
+      "reference": "Why is Jochi's reported alliance with the Muslims historically suspect?",
+      "prediction": "How old was Sultan Muhammad in 1223?"
+    },
+    {
+      "highlighted": "Deacons are called by God, affirmed by the church, and ordained by a bishop to servant leadership within the church.They are ordained to ministries of word, service, compassion, and justice. They may be appointed to ministry within the local church or to an extension ministry that supports the mission of the church. <hl> Deacons <hl> give leadership, preach the Word, contribute in worship, conduct marriages, bury the dead, and aid the church in embodying its mission within the world. Deacons assist elders in the sacraments of Holy Communion and Baptism, and may be granted sacramental authority if they are appointed as the pastor in a local church. Deacons serve a term of 2–3 years as provisional deacons prior to their ordination.",
+      "answer": "Deacons",
+      "reference": "Who gives leadership, preaches the Word and conducts marriages, among other duties?",
+      "prediction": "Who give leadership, preach the Word, contribute in worship, conduct marriages, bury the dead, and aid the church in embodying its mission within the world?"
+    },
+    {
+      "highlighted": "Luther's final journey, to Mansfeld, was taken because of his concern for <hl> his siblings' families <hl> continuing in their father Hans Luther's copper mining trade. Their livelihood was threatened by Count Albrecht of Mansfeld bringing the industry under his own control. The controversy that ensued involved all four Mansfeld counts: Albrecht, Philip, John George, and Gerhard. Luther journeyed to Mansfeld twice in late 1545 to participate in the negotiations for a settlement, and a third visit was needed in early 1546 for their completion.",
+      "answer": "his siblings' families",
+      "reference": "For whom was Luther concerned about in Mansfeld?",
+      "prediction": "Who was Luther concerned about continuing in his father's copper mining trade?"
+    },
+    {
+      "highlighted": "The Broncos' defense ranked first in the NFL yards allowed (4,530) for the first time in franchise history, and fourth in points allowed (296). Defensive ends Derek Wolfe and Malik Jackson each had 5½ sacks. Pro Bowl linebacker <hl> Von Miller <hl> led the team with 11 sacks, forced four fumbles, and recovered three. Linebacker DeMarcus Ware was selected to play in the Pro Bowl for the ninth time in his career, ranking second on the team with 7½ sacks. Linebacker Brandon Marshall led the team in total tackles with 109, while Danny Trevathan ranked second with 102. Cornerbacks Aqib Talib (three interceptions) and Chris Harris, Jr. (two interceptions) were the other two Pro Bowl selections from the defense.",
+      "answer": "Von Miller",
+      "reference": "Which linebacker had the most sacks on the team?",
+      "prediction": "Who led the Broncos with 11 sacks?"
+    },
+    {
+      "highlighted": "Instability troubled the early years of Kublai Khan's reign. Ogedei's grandson Kaidu refused to submit to Kublai and threatened the western frontier of Kublai's domain. The hostile but weakened Song dynasty remained an obstacle in the south. Kublai secured the <hl> northeast <hl> border in 1259 by installing the hostage prince Wonjong as the ruler of Korea, making it a Mongol tributary state. Kublai was also threatened by domestic unrest. Li Tan, the son-in-law of a powerful official, instigated a revolt against Mongol rule in 1262. After successfully suppressing the revolt, Kublai curbed the influence of the Han Chinese advisers in his court. He feared that his dependence on Chinese officials left him vulnerable to future revolts and defections to the Song.",
+      "answer": "northeast",
+      "reference": "Where did Korea border Kublai's territory?",
+      "prediction": "Which border did Kublai secure in 1259?"
+    },
+    {
+      "highlighted": "With the 2011 cancellation of Supernanny, <hl> Extreme Makeover: Home Edition <hl> became the only remaining program on the network's schedule that was broadcast in 4:3 standard definition. All of the network's programming has been presented in HD since January 2012 (with the exception of certain holiday specials produced prior to 2005 – such as the Peanuts specials and Rudolph's Shiny New Year – which continue to be presented in 4:3 SD), when Extreme Makeover: Home Edition ended its run as a regular series and One Life to Live (which had been presented in 16:9 standard definition since 2010) also ended its ABC run. The affiliate-syndicated Saturday morning E/I block Litton's Weekend Aventure is also broadcast in HD, and was the first children's program block on any U.S. broadcast network to feature programs available in the format upon its September 2011 debut.",
+      "answer": "Extreme Makeover: Home Edition",
+      "reference": "In 2011, which program became the only ABC broadcast in 4:3 standard definition?",
+      "prediction": "What was the only remaining program on Supernanny to be broadcast in 4:3 standard definition?"
+    },
+    {
+      "highlighted": "The zeta function is closely related to prime numbers. For example, the aforementioned fact that there are infinitely many primes can also be seen using the zeta function: if there were only finitely many primes then ζ(1) would have a finite value. However, the harmonic series 1 + 1/2 + 1/3 + 1/4 + ... diverges (i.e., <hl> exceeds any given number <hl>), so there must be infinitely many primes. Another example of the richness of the zeta function and a glimpse of modern algebraic number theory is the following identity (Basel problem), due to Euler,",
+      "answer": "exceeds any given number",
+      "reference": "What does it mean when a harmonic series diverges?",
+      "prediction": "What happens when the harmonic series diverges?"
+    },
+    {
+      "highlighted": "There are eight rows of combs that run <hl> from near the mouth to the opposite end <hl>, and are spaced evenly round the body. The \"combs\" beat in a metachronal rhythm rather like that of a Mexican wave. From each balancer in the statocyst a ciliary groove runs out under the dome and then splits to connect with two adjacent comb rows, and in some species runs all the way along the comb rows. This forms a mechanical system for transmitting the beat rhythm from the combs to the balancers, via water disturbances created by the cilia.",
+      "answer": "from near the mouth to the opposite end",
+      "reference": "Where are the rows of combs located?",
+      "prediction": "Where do the combs run?"
+    },
+    {
+      "highlighted": "A cylindrical <hl> Service Module (SM) <hl> supported the Command Module, with a service propulsion engine and an RCS with propellants, and a fuel cell power generation system with liquid hydrogen and liquid oxygen reactants. A high-gain S-band antenna was used for long-distance communications on the lunar flights. On the extended lunar missions, an orbital scientific instrument package was carried. The Service Module was discarded just before re-entry. The module was 24.6 feet (7.5 m) long and 12.83 feet (3.91 m) in diameter. The initial lunar flight version weighed approximately 51,300 pounds (23,300 kg) fully fueled, while a later version designed to carry a lunar orbit scientific instrument package weighed just over 54,000 pounds (24,000 kg).",
+      "answer": "Service Module (SM)",
+      "reference": "What helped support the Command Module with a propulsion engine and propellants?",
+      "prediction": "What supported the Command Module?"
+    },
+    {
+      "highlighted": "Unlike confirmation and profession of faith, Baptism is a sacrament in the UMC. The Book of Discipline of the United Methodist Church directs the local church to offer membership preparation or confirmation classes to all people, including adults. The term confirmation is generally reserved for youth, while some variation on membership class is generally used for adults wishing to join the church. The Book of Discipline normally allows any youth at least completing sixth grade to participate, although the pastor has discretionary authority to allow a younger person to participate. In <hl> confirmation and membership preparation classes <hl>, students learn about Church and the Methodist-Christian theological tradition in order to profess their ultimate faith in Christ.",
+      "answer": "confirmation and membership preparation classes",
+      "reference": "How do students learn about the church?",
+      "prediction": "What classes do students take to profess their ultimate faith in Christ?"
+    },
+    {
+      "highlighted": "Tesla's demonstration of his induction motor and Westinghouse's subsequent licensing of the patent, both in 1888, put Tesla firmly on the \"AC\" side of the so-called \"War of Currents,\" an electrical distribution battle being waged between Thomas Edison and George Westinghouse that had been simmering since Westinghouse's first AC system in 1886 and had reached the point of all-out warfare by 1888. This started out as a competition between rival lighting systems with Edison holding all the patents for DC and the incandescent light and Westinghouse using his own patented AC system to power arc lights as well as incandescent lamps of a slightly different design to get around the Edison patent. The acquisition of a feasible AC motor gave Westinghouse a key patent in building a completely integrated AC system, but the financial strain of buying up patents and hiring the engineers needed to build it meant development of Tesla's motor had to be put on hold for a while. The competition resulted in Edison Machine Works pursuing <hl> AC development <hl> in 1890 and by 1892 Thomas Edison was no longer in control of his own company, which was consolidated into the conglomerate General Electric and converting to an AC delivery system at that point.",
+      "answer": "AC development",
+      "reference": "What did Edison Machine Works persue in 1890?",
+      "prediction": "What did Edison Machine Works pursue in 1890?"
+    },
+    {
+      "highlighted": "By the late 19th century scientists realized that air could be liquefied, and its components isolated, by <hl> compressing and cooling <hl> it. Using a cascade method, Swiss chemist and physicist Raoul Pierre Pictet evaporated liquid sulfur dioxide in order to liquefy carbon dioxide, which in turn was evaporated to cool oxygen gas enough to liquefy it. He sent a telegram on December 22, 1877 to the French Academy of Sciences in Paris announcing his discovery of liquid oxygen. Just two days later, French physicist Louis Paul Cailletet announced his own method of liquefying molecular oxygen. Only a few drops of the liquid were produced in either case so no meaningful analysis could be conducted. Oxygen was liquified in stable state for the first time on March 29, 1883 by Polish scientists from Jagiellonian University, Zygmunt Wróblewski and Karol Olszewski.",
+      "answer": "compressing and cooling",
+      "reference": "By what means were scientists able to liquefy air?",
+      "prediction": "How could air be liquefied and its components isolated?"
+    },
+    {
+      "highlighted": "Luther is honoured on 18 February with a commemoration in the Lutheran Calendar of Saints and in the <hl> Episcopal (United States) Calendar of Saints. <hl> In the Church of England's Calendar of Saints he is commemorated on 31 October.",
+      "answer": "Episcopal (United States) Calendar of Saints.",
+      "reference": "On what other calendar is Luther commemorated?",
+      "prediction": "In what calendar of Saints is Luther commemorated?"
+    }
+  ]
+}

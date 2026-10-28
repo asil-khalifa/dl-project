@@ -1,0 +1,151 @@
+{
+  "stats": {
+    "n_words": 330,
+    "n_passages": 4,
+    "n_candidates": 58,
+    "n_selected": 15,
+    "n_generated": 15,
+    "n_passed_filter": 11,
+    "n_final": 8,
+    "mean_quality": 1.0,
+    "by_type": {
+      "short": 2,
+      "mcq": 2,
+      "fill": 2,
+      "tf": 2
+    },
+    "qg_model": "lmqg/t5-small-squad-qg-ae",
+    "qa_model": "distilbert/distilbert-base-cased-distilled-squad",
+    "elapsed_s": 35.0
+  },
+  "questions": [
+    {
+      "qid": 1,
+      "qtype": "short",
+      "question": "When was ISRO founded?",
+      "answer": "15 August 1969",
+      "options": [],
+      "passage_id": 0,
+      "source_sentence": "It was founded on 15 August 1969 under the leadership of Vikram Sarabhai, who is regarded as the father of the Indian space programme.",
+      "quality": 1.0,
+      "qa_confidence": 0.959,
+      "qa_answer": "15 August 1969",
+      "bloom": "Remember",
+      "answer_kind": "DATE"
+    },
+    {
+      "qid": 2,
+      "qtype": "mcq",
+      "question": "Where is ISRO headquartered?",
+      "answer": "Bengaluru",
+      "options": [
+        "LVM3",
+        "India",
+        "first",
+        "Bengaluru"
+      ],
+      "passage_id": 0,
+      "source_sentence": "ISRO is headquartered in Bengaluru and works under the Department of Space, which reports directly to the Prime Minister.",
+      "quality": 1.0,
+      "qa_confidence": 0.995,
+      "qa_answer": "Bengaluru",
+      "bloom": "Remember",
+      "answer_kind": "GPE"
+    },
+    {
+      "qid": 3,
+      "qtype": "fill",
+      "question": "Fill in the blank: In February 2017 a single PSLV mission carried a record ______ satellites into orbit.",
+      "answer": "104",
+      "options": [],
+      "passage_id": 1,
+      "source_sentence": "In February 2017 a single PSLV mission carried a record 104 satellites into orbit.",
+      "quality": 1.0,
+      "qa_confidence": 0.863,
+      "qa_answer": "104",
+      "bloom": "Remember",
+      "answer_kind": "NUMBER"
+    },
+    {
+      "qid": 4,
+      "qtype": "tf",
+      "question": "True or False: Its Indian Space Research Organisation, helped confirm the presence of water molecules on the lunar surface.",
+      "answer": "False (correct: Moon Impact Probe)",
+      "options": [
+        "True",
+        "False"
+      ],
+      "passage_id": 1,
+      "source_sentence": "Its Moon Impact Probe helped confirm the presence of water molecules on the lunar surface.",
+      "quality": 1.0,
+      "qa_confidence": 0.915,
+      "qa_answer": "Moon Impact Probe",
+      "bloom": "Remember",
+      "answer_kind": "NOUN_CHUNK"
+    },
+    {
+      "qid": 5,
+      "qtype": "short",
+      "question": "When did India land a spacecraft near the south pole of the Moon?",
+      "answer": "23 August 2023",
+      "options": [],
+      "passage_id": 2,
+      "source_sentence": "On 23 August 2023, Chandrayaan-3 made India the first nation to land a spacecraft near the south pole of the Moon.",
+      "quality": 1.0,
+      "qa_confidence": 0.974,
+      "qa_answer": "23 August 2023",
+      "bloom": "Remember",
+      "answer_kind": "DATE"
+    },
+    {
+      "qid": 6,
+      "qtype": "mcq",
+      "question": "What did ISRO launch Aditya-L1 to study?",
+      "answer": "the Sun",
+      "options": [
+        "everyday needs",
+        "the Sun",
+        "rover Pragyan",
+        "450 crore"
+      ],
+      "passage_id": 2,
+      "source_sentence": "A few days later, on 2 September 2023, ISRO launched Aditya-L1, its first mission to study the Sun from the first Lagrange point.",
+      "quality": 1.0,
+      "qa_confidence": 0.804,
+      "qa_answer": "the Sun",
+      "bloom": "Remember",
+      "answer_kind": "NOUN_CHUNK"
+    },
+    {
+      "qid": 7,
+      "qtype": "fill",
+      "question": "Fill in the blank: ISRO's heavy-lift rocket, ______ will carry the Gaganyaan capsule, which is intended to take Indian astronauts to low Earth orbit.",
+      "answer": "the LVM3,",
+      "options": [],
+      "passage_id": 2,
+      "source_sentence": "ISRO's heavy-lift rocket, the LVM3, will carry the Gaganyaan capsule, which is intended to take Indian astronauts to low Earth orbit.",
+      "quality": 1.0,
+      "qa_confidence": 0.803,
+      "qa_answer": "LVM3",
+      "bloom": "Remember",
+      "answer_kind": "NOUN_CHUNK"
+    },
+    {
+      "qid": 8,
+      "qtype": "tf",
+      "question": "True or False: ISRO also serves everyday needs.",
+      "answer": "True",
+      "options": [
+        "True",
+        "False"
+      ],
+      "passage_id": 3,
+      "source_sentence": "ISRO also serves everyday needs.",
+      "quality": 1.0,
+      "qa_confidence": 0.999,
+      "qa_answer": "ISRO",
+      "bloom": "Remember",
+      "answer_kind": "ORG"
+    }
+  ]
+}

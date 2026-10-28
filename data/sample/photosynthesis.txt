@@ -1,0 +1,11 @@
+Photosynthesis is the process by which green plants, algae and some bacteria convert light energy into chemical energy stored in glucose. In plants it takes place inside chloroplasts, organelles that contain the green pigment chlorophyll. Chlorophyll absorbs mainly red and blue light and reflects green light, which is why leaves appear green.
+
+The overall reaction combines six molecules of carbon dioxide with six molecules of water to produce one molecule of glucose and six molecules of oxygen. Carbon dioxide enters the leaf through small pores called stomata, while water is drawn up from the roots through the xylem.
+
+Photosynthesis has two stages. The light-dependent reactions occur in the thylakoid membranes of the chloroplast. Here, light energy splits water molecules, releasing oxygen as a by-product and producing two energy carriers, ATP and NADPH. The second stage, the Calvin cycle, takes place in the stroma. It uses the ATP and NADPH to fix carbon dioxide into three-carbon sugars, which are later assembled into glucose. The enzyme that captures carbon dioxide in the Calvin cycle is called RuBisCO, and it is thought to be the most abundant protein on Earth.
+
+The Calvin cycle is named after the American chemist Melvin Calvin, who traced the path of carbon through the cycle using radioactive carbon-14 and received the Nobel Prize in Chemistry in 1961. Much earlier, in 1779, the Dutch physician Jan Ingenhousz showed that plants release oxygen only in the presence of light.
+
+Some plants have evolved variations to cope with hot, dry climates. C4 plants such as maize and sugarcane first fix carbon dioxide into a four-carbon compound, which reduces wasteful photorespiration. CAM plants such as cacti and pineapples open their stomata at night to collect carbon dioxide and close them during the day to conserve water.
+
+The rate of photosynthesis depends on light intensity, carbon dioxide concentration and temperature. Each of these can act as a limiting factor: increasing light, for example, raises the rate only until another factor such as carbon dioxide becomes scarce. Photosynthesis is the ultimate source of the oxygen in the atmosphere and of nearly all the food energy that supports life on Earth.

@@ -1,0 +1,18 @@
+# Install PyTorch first (CPU wheel shown; use the CUDA wheel if you have a GPU):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
+transformers>=4.40
+datasets>=2.19
+sentencepiece
+protobuf
+accelerate
+spacy>=3.7
+nltk
+rouge-score
+sacrebleu
+gradio>=4.0
+pymupdf
+pandas
+matplotlib
+tqdm
+pytest
