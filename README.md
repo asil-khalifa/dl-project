@@ -110,9 +110,16 @@ Round-trip filter on the sample texts (t5-base): 18 of 18 generated questions we
 DistilBERT with token F1 >= 0.5 on the neural-networks sample, 11 of 15 on the ISRO sample with
 t5-small. Demo screenshots are in `results/screenshots/`, example outputs in `results/sample_output_*`.
 
+## Report
+
+The submitted report (16 pages, A4) is `report/Team3_CSPE72_Report_Automatic_Question_Generation.pdf`.
+It covers the 14 required sections plus a comparison with published SQuAD question-generation
+models and the prompts issued to the AI agent.
+
 ## Repository layout
 
 ```
+report/             the submitted PDF report
 studyqg/            Python package (pipeline stages)
 scripts/            data preparation, training, evaluation, plotting, CLI
 app/app.py          Gradio demo
