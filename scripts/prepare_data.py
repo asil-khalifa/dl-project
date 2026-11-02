@@ -54,7 +54,8 @@ def write_jsonl(rows: list[dict], path: Path):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--train_size", type=int, default=8000)
-    ap.add_argument("--val_size", type=int, default=300)
+    ap.add_argument("--val_size", type=int, default=300, help="SQuAD dev paragraphs -> validation.jsonl (test set)")
+    ap.add_argument("--holdout_size", type=int, default=200, help="train-split examples held out -> holdout.jsonl (validation set)")
     ap.add_argument("--out", default="data/squad_hl")
     ap.add_argument("--seed", type=int, default=42)
     args = ap.parse_args()
@@ -75,8 +76,13 @@ def main():
                 continue
             seen_ctx.add(ex["context"])
             rows.append(r)
-            if size and len(rows) >= size:
+            extra = args.holdout_size if split == "train" else 0
+            if size and len(rows) >= size + extra:
                 break
+        if split == "train" and args.holdout_size:
+            holdout, rows = rows[size:size + args.holdout_size], rows[:size]
+            write_jsonl(holdout, out / "holdout.jsonl")
+            print(f"holdout: {len(holdout)} examples -> {out / 'holdout.jsonl'} (validation set, disjoint from train)")
         write_jsonl(rows, out / f"{name}.jsonl")
         print(f"{name}: {len(rows)} examples -> {out / (name + '.jsonl')}")
     print("example source:", rows[0]["source"][:200], "...")

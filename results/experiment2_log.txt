@@ -1,0 +1,83 @@
+device=cpu threads=8 base=google-t5/t5-small
+train=8000 val=200 (holdout.jsonl) test=300 (validation.jsonl) params=60.5M steps=1000
+[eval] step 0: val loss 3.7066  test loss 3.6762
+epoch 1 step 20/1000 loss 3.5720 lr 1.20e-04 elapsed 0.7m eta 32.5m
+epoch 1 step 40/1000 loss 2.8537 lr 2.40e-04 elapsed 1.3m eta 32.2m
+epoch 1 step 60/1000 loss 2.5028 lr 2.97e-04 elapsed 2.0m eta 31.8m
+epoch 1 step 80/1000 loss 2.4152 lr 2.91e-04 elapsed 2.7m eta 31.2m
+epoch 1 step 100/1000 loss 2.4880 lr 2.84e-04 elapsed 3.5m eta 31.3m
+[eval] step 100: val loss 2.0347  test loss 1.9591
+epoch 1 step 120/1000 loss 2.3931 lr 2.78e-04 elapsed 4.7m eta 34.1m
+epoch 1 step 140/1000 loss 2.2466 lr 2.72e-04 elapsed 5.5m eta 33.7m
+epoch 1 step 160/1000 loss 2.2254 lr 2.65e-04 elapsed 6.2m eta 32.3m
+epoch 1 step 180/1000 loss 2.2221 lr 2.59e-04 elapsed 6.8m eta 31.1m
+epoch 1 step 200/1000 loss 2.0935 lr 2.53e-04 elapsed 7.5m eta 30.0m
+[eval] step 200: val loss 1.9746  test loss 1.8909
+epoch 1 step 220/1000 loss 2.0802 lr 2.46e-04 elapsed 8.7m eta 30.8m
+epoch 1 step 240/1000 loss 2.0971 lr 2.40e-04 elapsed 9.3m eta 29.6m
+epoch 1 step 260/1000 loss 2.1794 lr 2.34e-04 elapsed 10.1m eta 28.8m
+epoch 1 step 280/1000 loss 2.1065 lr 2.27e-04 elapsed 11.0m eta 28.2m
+epoch 1 step 300/1000 loss 2.1370 lr 2.21e-04 elapsed 11.7m eta 27.3m
+[eval] step 300: val loss 1.9048  test loss 1.8374
+epoch 1 step 320/1000 loss 2.1442 lr 2.15e-04 elapsed 12.9m eta 27.5m
+epoch 1 step 340/1000 loss 2.1546 lr 2.08e-04 elapsed 13.6m eta 26.4m
+epoch 1 step 360/1000 loss 1.9332 lr 2.02e-04 elapsed 14.3m eta 25.4m
+epoch 1 step 380/1000 loss 2.0808 lr 1.96e-04 elapsed 14.9m eta 24.4m
+epoch 1 step 400/1000 loss 2.1662 lr 1.89e-04 elapsed 15.6m eta 23.4m
+[eval] step 400: val loss 1.8776  test loss 1.8098
+epoch 1 step 420/1000 loss 2.0067 lr 1.83e-04 elapsed 16.8m eta 23.2m
+epoch 1 step 440/1000 loss 2.1486 lr 1.77e-04 elapsed 17.5m eta 22.3m
+epoch 1 step 460/1000 loss 2.1490 lr 1.71e-04 elapsed 18.1m eta 21.2m
+epoch 1 step 480/1000 loss 2.0822 lr 1.64e-04 elapsed 18.7m eta 20.3m
+epoch 1 step 500/1000 loss 2.0692 lr 1.58e-04 elapsed 19.4m eta 19.4m
+[eval] step 500: val loss 1.8752  test loss 1.7879
+epoch 1 step 520/1000 loss 2.1674 lr 1.52e-04 elapsed 21.1m eta 19.4m
+epoch 1 step 540/1000 loss 1.9920 lr 1.45e-04 elapsed 22.1m eta 18.8m
+epoch 1 step 560/1000 loss 2.0804 lr 1.39e-04 elapsed 23.2m eta 18.2m
+epoch 1 step 580/1000 loss 2.0230 lr 1.33e-04 elapsed 24.2m eta 17.6m
+epoch 1 step 600/1000 loss 2.0399 lr 1.26e-04 elapsed 25.3m eta 16.9m
+[eval] step 600: val loss 1.8466  test loss 1.7697
+epoch 1 step 620/1000 loss 1.9803 lr 1.20e-04 elapsed 27.2m eta 16.7m
+epoch 1 step 640/1000 loss 2.0029 lr 1.14e-04 elapsed 28.1m eta 15.8m
+epoch 1 step 660/1000 loss 2.0823 lr 1.07e-04 elapsed 29.0m eta 14.9m
+epoch 1 step 680/1000 loss 1.9834 lr 1.01e-04 elapsed 29.8m eta 14.0m
+epoch 1 step 700/1000 loss 2.2002 lr 9.47e-05 elapsed 30.5m eta 13.1m
+[eval] step 700: val loss 1.8281  test loss 1.7582
+epoch 1 step 720/1000 loss 2.0135 lr 8.84e-05 elapsed 32.2m eta 12.5m
+epoch 1 step 740/1000 loss 2.1924 lr 8.21e-05 elapsed 33.1m eta 11.6m
+epoch 1 step 760/1000 loss 2.0036 lr 7.58e-05 elapsed 33.8m eta 10.7m
+epoch 1 step 780/1000 loss 1.9650 lr 6.95e-05 elapsed 34.6m eta 9.8m
+epoch 1 step 800/1000 loss 2.0158 lr 6.32e-05 elapsed 35.6m eta 8.9m
+[eval] step 800: val loss 1.8117  test loss 1.7494
+epoch 1 step 820/1000 loss 1.8643 lr 5.68e-05 elapsed 37.1m eta 8.1m
+epoch 1 step 840/1000 loss 1.9861 lr 5.05e-05 elapsed 37.8m eta 7.2m
+epoch 1 step 860/1000 loss 2.0835 lr 4.42e-05 elapsed 38.5m eta 6.3m
+epoch 1 step 880/1000 loss 2.1759 lr 3.79e-05 elapsed 39.4m eta 5.4m
+epoch 1 step 900/1000 loss 2.1496 lr 3.16e-05 elapsed 40.3m eta 4.5m
+[eval] step 900: val loss 1.8084  test loss 1.7440
+epoch 1 step 920/1000 loss 1.9904 lr 2.53e-05 elapsed 41.7m eta 3.6m
+epoch 1 step 940/1000 loss 2.0608 lr 1.89e-05 elapsed 42.5m eta 2.7m
+epoch 1 step 960/1000 loss 2.0535 lr 1.26e-05 elapsed 43.3m eta 1.8m
+epoch 1 step 980/1000 loss 1.9673 lr 6.32e-06 elapsed 44.0m eta 0.9m
+epoch 1 step 1000/1000 loss 2.0426 lr 0.00e+00 elapsed 44.8m eta 0.0m
+[eval] step 1000: val loss 1.8018  test loss 1.7361
+== epoch 1 done: val loss 1.8018
+saved model to /home/asilk/self/dl-project/studyqg/models/t5-small-studyqg; log to /home/asilk/self/dl-project/studyqg/results/train_log.json; 45.3 min
+{
+  "bleu4": 16.98,
+  "bleu1": 48.95,
+  "rougeL": 42.81,
+  "meteor": 41.46,
+  "exact_match": 1.33,
+  "name": "t5-small-ours",
+  "model": "models/t5-small-studyqg",
+  "n": 300,
+  "num_beams": 4,
+  "seconds_per_question": 0.375
+}
+wrote /home/asilk/self/dl-project/studyqg/results/metrics.csv
+findfont: Failed to find font weight semibold for DejaVu Sans, now using 700.
+findfont: Failed to find font weight semibold for DejaVu Sans, now using 700.
+wrote results/training_curve.png
+wrote results/test_loss_curve.png
+wrote results/metrics.png

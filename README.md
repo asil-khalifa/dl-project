@@ -86,23 +86,25 @@ target: Who did Beyonce play in Cadillac Records?
 
 ## Results
 
-Evaluation on 300 SQuAD v1.1 validation paragraphs (one question each, beam size 4,
+Evaluation on a test set of 300 paragraphs from the SQuAD v1.1 development split (one question each, beam size 4,
 `scripts/evaluate.py`). Scores are 0-100, higher is better. Timings are per question on a
 16-core laptop CPU (8 PyTorch threads, no GPU).
 
 | Model | Training data | BLEU-4 | ROUGE-L | METEOR | s / question |
 | --- | --- | --- | --- | --- | --- |
 | t5-small, zero-shot (no fine-tuning) | none | 2.7 | 15.2 | 10.2 | 0.55 |
-| **t5-small, ours** (`scripts/train.py`) | 8,000 SQuAD examples, 1 epoch, 49 min on CPU | **17.7** | **42.2** | **41.0** | 0.63 |
+| **t5-small, ours** (`scripts/train.py`) | 8,000 SQuAD examples, 1 epoch, 45 min on CPU | **17.0** | **42.8** | **41.5** | 0.38 |
 | t5-small, lmqg | full SQuAD (87.6k), GPU | 22.5 | 47.9 | 47.7 | 0.91 |
 | t5-base, lmqg (demo default) | full SQuAD (87.6k), GPU | 24.5 | 49.7 | 49.5 | 2.69 |
 
-Fine-tuning on 9% of SQuAD for one epoch on a laptop CPU takes the validation loss from 3.66 to
-1.68 and closes about 80% of the gap between the zero-shot model and the full-data checkpoint of
+Fine-tuning on 9% of SQuAD for one epoch on a laptop CPU takes the test loss from 3.68 to
+1.74 (validation loss on 200 held-out training examples: 3.71 to 1.80) and closes about 80% of the gap between the zero-shot model and the full-data checkpoint of
 the same size. The rest of the gap is data (11x more) and model size (t5-base is 3.7x larger and
 3x slower).
 
-![Training curve](results/training_curve.png)
+![Training and validation loss](results/training_curve.png)
+
+![Test loss](results/test_loss_curve.png)
 
 ![Metric comparison](results/metrics.png)
 

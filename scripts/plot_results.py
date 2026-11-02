@@ -44,13 +44,18 @@ def training_curve():
     style(ax)
     ax.plot(log["steps"], log["loss"], color=BLUE, lw=2, solid_joinstyle="round", solid_capstyle="round",
             label=f"training loss (mean of {log['config']['log_every']} steps)")
-    n_ep = max(len(log["epoch_val_loss"]), 1)
-    per = log["steps"][-1] / n_ep
-    xs = [0] + [per * (i + 1) for i in range(len(log["epoch_val_loss"]))]
-    ys = [log["initial_val_loss"]] + log["epoch_val_loss"]
-    ax.plot(xs, ys, color=ORANGE, lw=0, marker="o", ms=8, markeredgecolor=SURFACE, markeredgewidth=2,
-            label="validation loss (before training, epoch end)")
-    for x, y in zip(xs, ys):
+    if log.get("eval_steps"):
+        xs, ys = log["eval_steps"], log["val_loss"]
+        ax.plot(xs, ys, color=ORANGE, lw=2, marker="o", ms=7, markeredgecolor=SURFACE, markeredgewidth=2,
+                solid_joinstyle="round", label=f"validation loss ({log['config']['max_val']} held-out training examples)")
+    else:
+        n_ep = max(len(log["epoch_val_loss"]), 1)
+        per = log["steps"][-1] / n_ep
+        xs = [0] + [per * (i + 1) for i in range(len(log["epoch_val_loss"]))]
+        ys = [log["initial_val_loss"]] + log["epoch_val_loss"]
+        ax.plot(xs, ys, color=ORANGE, lw=0, marker="o", ms=8, markeredgecolor=SURFACE, markeredgewidth=2,
+                label="validation loss (before training, epoch end)")
+    for x, y in ((xs[0], ys[0]), (xs[-1], ys[-1])):
         ax.annotate(f"{y:.2f}", (x, y), textcoords="offset points", xytext=(0, 9), ha="center", fontsize=8.5, color=INK2)
     ax.set_xlabel("optimizer step (batch size %d)" % log["config"]["batch_size"], color=INK2, fontsize=9)
     ax.set_ylabel("cross-entropy loss", color=INK2, fontsize=9)
@@ -62,6 +67,35 @@ def training_curve():
     fig.savefig(RES / "training_curve.png", facecolor=SURFACE)
     plt.close(fig)
     print("wrote results/training_curve.png")
+
+
+def test_loss_curve():
+    p = RES / "train_log.json"
+    if not p.exists():
+        return
+    log = json.loads(p.read_text())
+    if not log.get("eval_steps"):
+        print("no periodic test loss in train_log.json, skipping test-loss curve")
+        return
+    xs, ys = log["eval_steps"], log["test_loss"]
+    fig, ax = plt.subplots(figsize=(7, 3.8), dpi=150, facecolor=SURFACE)
+    style(ax)
+    ax.plot(xs, ys, color=BLUE, lw=2, marker="o", ms=7, markeredgecolor=SURFACE, markeredgewidth=2, solid_joinstyle="round")
+    for x, y in ((xs[0], ys[0]), (xs[-1], ys[-1])):
+        ax.annotate(f"{y:.2f}", (x, y), textcoords="offset points", xytext=(0, 9), ha="center", fontsize=8.5, color=INK2)
+    lo = min(ys)
+    if lo < ys[-1] - 0.005:
+        i = ys.index(lo)
+        ax.annotate(f"min {lo:.2f}", (xs[i], lo), textcoords="offset points", xytext=(0, -14), ha="center", fontsize=8.5, color=INK2)
+    ax.set_xlabel("optimizer step (batch size %d)" % log["config"]["batch_size"], color=INK2, fontsize=9)
+    ax.set_ylabel("cross-entropy loss", color=INK2, fontsize=9)
+    n_test = log["config"].get("max_test", "")
+    ax.set_title(f"Test loss on {n_test} SQuAD development paragraphs falls from {ys[0]:.2f} to {ys[-1]:.2f}",
+                 loc="left", fontsize=11, color=INK, fontweight="semibold")
+    fig.tight_layout()
+    fig.savefig(RES / "test_loss_curve.png", facecolor=SURFACE)
+    plt.close(fig)
+    print("wrote results/test_loss_curve.png")
 
 
 def metrics_chart():
@@ -90,7 +124,7 @@ def metrics_chart():
         ax.set_title(title, loc="left", fontsize=10, color=INK, fontweight="semibold")
         ax.set_ylim(0, max(df[col].max() * 1.25, 1))
     n = int(df["n"].iloc[0])
-    fig.suptitle(f"Question quality on {n} SQuAD validation paragraphs (higher is better); our fine-tuned model in blue",
+    fig.suptitle(f"Question quality on the {n}-paragraph SQuAD test set (higher is better); our fine-tuned model in blue",
                  x=0.01, ha="left", fontsize=11, color=INK, fontweight="semibold")
     fig.tight_layout(rect=(0, 0, 1, 0.92))
     fig.savefig(RES / "metrics.png", facecolor=SURFACE)
@@ -100,4 +134,5 @@ def metrics_chart():
 
 if __name__ == "__main__":
     training_curve()
+    test_loss_curve()
     metrics_chart()

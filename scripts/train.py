@@ -75,6 +75,10 @@ def main():
     ap.add_argument("--max_target_len", type=int, default=48)
     ap.add_argument("--max_train", type=int, default=0, help="use only the first N training rows")
     ap.add_argument("--max_val", type=int, default=200)
+    ap.add_argument("--val_file", default="holdout.jsonl", help="validation set (relative to --data); falls back to validation.jsonl")
+    ap.add_argument("--test_file", default="validation.jsonl", help="test set: SQuAD dev paragraphs (relative to --data)")
+    ap.add_argument("--max_test", type=int, default=300)
+    ap.add_argument("--eval_every", type=int, default=100, help="evaluate validation and test loss every N optimiser steps")
     ap.add_argument("--log_every", type=int, default=20)
     ap.add_argument("--threads", type=int, default=0, help="0 = half the logical CPUs")
     ap.add_argument("--seed", type=int, default=42)
@@ -98,21 +102,37 @@ def main():
 
     data = ROOT / args.data if not Path(args.data).is_absolute() else Path(args.data)
     train_ds = JsonlDataset(data / "train.jsonl", args.max_train)
-    val_ds = JsonlDataset(data / "validation.jsonl", args.max_val)
+    val_path = data / args.val_file
+    if not val_path.exists():
+        val_path = data / "validation.jsonl"
+    val_ds = JsonlDataset(val_path, args.max_val)
+    test_ds = JsonlDataset(data / args.test_file, args.max_test)
     collate = make_collate(tok, args.max_source_len, args.max_target_len)
     train_dl = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True, collate_fn=collate)
     val_dl = DataLoader(val_ds, batch_size=args.batch_size, shuffle=False, collate_fn=collate)
+    test_dl = DataLoader(test_ds, batch_size=args.batch_size, shuffle=False, collate_fn=collate)
 
     steps_per_epoch = math.ceil(len(train_dl) / args.grad_accum)
     total_steps = steps_per_epoch * args.epochs
     opt = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=0.01)
     sched = get_linear_schedule_with_warmup(opt, int(args.warmup * total_steps), total_steps)
-    print(f"train={len(train_ds)} val={len(val_ds)} params={n_params/1e6:.1f}M steps={total_steps}")
+    print(f"train={len(train_ds)} val={len(val_ds)} ({val_path.name}) test={len(test_ds)} ({args.test_file}) "
+          f"params={n_params/1e6:.1f}M steps={total_steps}")
 
     log = {"config": vars(args), "n_params": n_params, "steps": [], "loss": [], "lr": [],
-           "epoch_val_loss": [], "initial_val_loss": None}
-    log["initial_val_loss"] = evaluate_loss(model, val_dl, device)
-    print(f"initial val loss = {log['initial_val_loss']:.4f}")
+           "epoch_val_loss": [], "initial_val_loss": None,
+           "eval_steps": [], "val_loss": [], "test_loss": [], "val_file": val_path.name, "test_file": args.test_file}
+
+    def run_eval(at_step: int):
+        vl = evaluate_loss(model, val_dl, device)
+        tl = evaluate_loss(model, test_dl, device)
+        log["eval_steps"].append(at_step)
+        log["val_loss"].append(vl)
+        log["test_loss"].append(tl)
+        print(f"[eval] step {at_step}: val loss {vl:.4f}  test loss {tl:.4f}", flush=True)
+        return vl
+
+    log["initial_val_loss"] = run_eval(0)
 
     step, running, t0 = 0, [], time.time()
     for epoch in range(args.epochs):
@@ -137,7 +157,9 @@ def main():
                     eta = el / step * (total_steps - step)
                     print(f"epoch {epoch+1} step {step}/{total_steps} loss {mean:.4f} "
                           f"lr {sched.get_last_lr()[0]:.2e} elapsed {el/60:.1f}m eta {eta/60:.1f}m", flush=True)
-        vl = evaluate_loss(model, val_dl, device)
+                if args.eval_every and step % args.eval_every == 0 and step != total_steps:
+                    run_eval(step)
+        vl = run_eval(step) if (not log["eval_steps"] or log["eval_steps"][-1] != step) else log["val_loss"][-1]
         log["epoch_val_loss"].append(vl)
         print(f"== epoch {epoch+1} done: val loss {vl:.4f}", flush=True)
 
