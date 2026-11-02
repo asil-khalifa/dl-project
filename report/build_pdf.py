@@ -51,7 +51,7 @@ def build_cover() -> fitz.Document:
     y = centered(page, y, "Deep Learning Techniques", 24, bold=True) + 56
     y = centered(page, y, "Automatic Question Generation from Study Material", 25, bold=True) + 14
     y = centered(page, y, "PROJECT REPORT", 23) + 70
-    names = ["Done by : Asil Khalifa (106123015)", "Lankireddy Hitesh Reddy (106123073)", "P Kamal Nag (106123093)"]
+    names = ["Asil Khalifa (106123015)", "Lankireddy Hitesh Reddy (106123073)", "P Kamal Nag (106123093)"]
     for i, line in enumerate(names):
         page.insert_text((LEFT, y + 16), line, fontname="hebo", fontsize=16)
         y += 16 * 1.5
