@@ -114,7 +114,8 @@ t5-small. Demo screenshots are in `results/screenshots/`, example outputs in `re
 
 The submitted report (19 pages, A4) is `report/Team3_CSPE72_Report_Automatic_Question_Generation.pdf`.
 It covers the 14 required sections plus a comparison with published SQuAD question-generation
-models and the prompts issued to the AI agent.
+models and the prompts issued to the AI agent. `report/build_pdf.py` prepends the institute cover
+page to an exported report body.
 
 ## Repository layout
 
