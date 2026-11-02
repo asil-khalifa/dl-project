@@ -112,7 +112,7 @@ t5-small. Demo screenshots are in `results/screenshots/`, example outputs in `re
 
 ## Report
 
-The submitted report (16 pages, A4) is `report/Team3_CSPE72_Report_Automatic_Question_Generation.pdf`.
+The submitted report (19 pages, A4) is `report/Team3_CSPE72_Report_Automatic_Question_Generation.pdf`.
 It covers the 14 required sections plus a comparison with published SQuAD question-generation
 models and the prompts issued to the AI agent.
 
