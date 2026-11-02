@@ -58,12 +58,32 @@ def build_cover() -> fitz.Document:
     return doc
 
 
+HEADER_PREFIX = "Automatic Question Generation from Study Material"
+
+
+def strip_running_header(body: fitz.Document) -> int:
+    """Remove the exporter's running header (document title) from the top of every page."""
+    removed = 0
+    for page in body:
+        for rect in page.search_for(HEADER_PREFIX):
+            if rect.y1 < 60:                       # header zone only, never the title on page 1
+                line = fitz.Rect(0, rect.y0 - 2, page.rect.width, rect.y1 + 2)
+                page.add_redact_annot(line)
+                removed += 1
+        page.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE)
+    return removed
+
+
 def main():
     if len(sys.argv) != 2:
         sys.exit(__doc__)
     body = fitz.open(sys.argv[1])
+    n = strip_running_header(body)
+    print(f"removed {n} running headers")
     final = build_cover()
     final.insert_pdf(body)
+    final.set_metadata({"title": "Automatic Question Generation from Study Material - CSPE72 Project Report (Team 3)",
+                        "author": "Asil Khalifa, Lankireddy Hitesh Reddy, P Kamal Nag", "subject": "CSPE72 Deep Learning Techniques"})
     final.save(OUT, garbage=3, deflate=True)
     print(f"wrote {OUT} ({len(final)} pages)")
 
